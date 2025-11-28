@@ -26,4 +26,7 @@ export function isBiggerThan2(n) {
  */
 export function isMult(n, m) {
   // Write your code here
+    if (n % m === 0) {
+    return true
+  }
 }
