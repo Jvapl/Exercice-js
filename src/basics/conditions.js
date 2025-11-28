@@ -14,6 +14,9 @@
  */
 export function isBiggerThan2(n) {
   // Write your code here
+  if (n > 2) {
+    return true
+  }
 }
 
 /**
