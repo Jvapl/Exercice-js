@@ -3,11 +3,9 @@
  * @return {number} sphere volume
  */
 export function computeSphereVolume(diameter) {
+    const radius = diameter / 2
+  return 4/3 * Math.PI * radius **3
   // Write your code here
-  const radius = (diameter / 2)
-  const number = diameter * (Math.PI * radius**3)
-  /* Math.PI  pour le pi*/
-  return number
 }
 
 /**

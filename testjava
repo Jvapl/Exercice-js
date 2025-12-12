@@ -1,0 +1,63 @@
+---- Structures logiques, operateurs et types
+---- structures de controle 
+
+- if () else if {}
+- for () {}
+- do {} while ()
+
+
+---- Qu'est qui  est vrai en JavaScript 
+
+1 oui 
+2 oui 
+3 non
+4 non
+
+
+---- Selon les bonnes pratiques actuelles, citez a utiliser une variable en JavaScript
+
+- const et let
+
+---- Dans quels cas de mesure allez vous utiliser un tableau ? comment peut-on déterminer si un tableau est la bonne strcture de données à utiliser ?
+
+- pour stocker plusieurs données du meme types 
+
+- sa sers quand o a besoin de travailler avec des données qui un lien entre elles
+
+- se des elements qui on un ordre et le meme type
+
+- un tablau peut avoir plusieur "nom" "nom" peut avoir des doublent
+
+---- Quelle structure de controle est la plus couramment utilisée pour manipuler les données contenues dans un tableau ?  
+
+- boucles ( for )
+
+--- premier code est t'il possible de l'executer ----
+
+- boucle infini 
+
+
+--- dexieme code ----
+
+- donne la moyenne des nombres dans le tableau ducoup le average
+
+--- le troisieme 
+
+- change tout les mots en majuscule ent minuscule et fais l'inverse avec les minuscule
+
+--- Que pourrai t'on utiliser pour compacter ce code
+
+-replace - oui
+-regex - oui
+-map - oui 
+-ternaire - oui - une autre maniere d'utiliser un if
+
+--- comparer deux code ---
+
+- ils donnent tout les deux la meme chose 
+
+- la seule difference est que on utilise on autre type de for
+
+--- pourrions nous utiser un autre commende poura refaire le meme code --- 
+
+- map
