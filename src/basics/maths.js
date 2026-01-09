@@ -7,13 +7,13 @@ export function computeSphereVolume(diameter) {
   return 4/3 * Math.PI * radius **3
   // Write your code here
 }
-
 /**
  * @param {number} n
  * @return {number} number rounded to one decimal
  */
 export function roundNumberToOneDecimals(n) {
   // Write your code here
+  return number.parseFloat(n).toFixed(1)
 }
 
 /**
