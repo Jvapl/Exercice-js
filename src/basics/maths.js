@@ -50,7 +50,6 @@ export function computeAverage(grades) {
   for (let i = 0 ; i < grades.length; i++) {
     sum += grades[i]
   }
-  
   return sum/grades.length
 }
 
@@ -61,4 +60,18 @@ export function computeAverage(grades) {
 
 export function roundedAverage(grades) {
   // Write your code here
+  if (!Array.isArray(grades)){
+  throw new Error ("Must be a valid table")
+  }
+  for(const grade of grades){
+    if (typeof grade !== "number" || Number.isNaN(grade)){
+    throw new Error ("Must be a valid number")
+  }
+  }
+  let sum = 0
+  for (let i = 0 ; i < grades.length; i++) {
+    sum += grades[i]
+  }
+  const sumGrade = sum/grades.length
+  return Math.round(sumGrade * 10) / 10
 }
