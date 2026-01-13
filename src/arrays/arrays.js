@@ -2,8 +2,18 @@
  * @param {array<string>} array An array containing words and sentences
  * @return {array<string>} An array with all words isolated, and with empty strings removed
  */
+
 export function splitAllStringsByWordAndFilterEmptyOnes(array) {
   // Write your code here
+  if (!Array.isArray(array)){
+    throw new error ("Need to be an array")
+  }
+  // ce que je cherche est d'etre le plus possible un professionel
+  const resultat = array.flatMap(item => {
+    return item.split(" ")
+  });
+  return resultat.filter(mot => mot !== "")
+
 }
 
 /**
