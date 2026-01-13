@@ -24,6 +24,8 @@ export function splitAllStringsByWordAndFilterEmptyOnes(array) {
  */
 export function concatenateArrays(array1, array2) {
   // Write your code here
+  const allArrays = [...array1,...array2]
+  return allArrays
 }
 
 /**
