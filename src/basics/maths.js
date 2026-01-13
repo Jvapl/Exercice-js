@@ -1,11 +1,20 @@
+import { error } from "console"
+import { errorMonitor } from "events"
+import { NetworkResources } from "inspector/promises"
+import { ExpectTypeOf } from "vitest"
+
 /**
  * @param {number} diameter
  * @return {number} sphere volume
  */
 export function computeSphereVolume(diameter) {
-    const radius = diameter / 2
-  return 4/3 * Math.PI * radius **3
   // Write your code here
+  if (typeof diameter === "string" || diameter < 0 || Number.isNaN(diameter)){
+  throw new Error ("Must be a valid number")
+  }
+  const radius = diameter / 2
+  const math = 4 / 3
+  return math * Math.PI * radius**3 
 }
 /**
  * @param {number} n
@@ -13,7 +22,7 @@ export function computeSphereVolume(diameter) {
  */
 export function roundNumberToOneDecimals(n) {
   // Write your code here
-  return number.parseFloat(n).toFixed(1)
+
 }
 
 /**
@@ -22,6 +31,7 @@ export function roundNumberToOneDecimals(n) {
  */
 export function computeAverage(grades) {
   // Write your code here
+
 }
 
 /**
@@ -30,4 +40,5 @@ export function computeAverage(grades) {
  */
 export function roundedAverage(grades) {
   // Write your code here
+
 }
