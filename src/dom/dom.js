@@ -9,6 +9,8 @@
  */
 export function getElementFromDomAndChangeColorToRed() {
   // Write your code here
+  const colorChange = document.getElementById("change-my-color")
+  colorChange.style.background = "red"
 }
 
 /**
