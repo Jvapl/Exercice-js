@@ -5,6 +5,8 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects
  */
 
+import { parse } from "path"
+
 /**
  * @return {Object} you should return a new object containing two properties, first_name and last_name.
  * The values of the properties should be "Toto", "Tutu"
@@ -51,8 +53,14 @@ export function iteratesThroughObjectValuesAndProperties(object) {
  */
 export function retrieveMaximumMinimumUserAges(users) {
   // Write your code here
+  users.sort((a,b) => a.age - b.age)
+  const first = users[0].name
+  const last = users[users.length - 1].name;
+  return {
+    younger: first,
+    older: last
+  }
 }
-
 /**
  * In javascript, objects can be represented as string, this is JSON
  * https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
