@@ -79,4 +79,5 @@ export function parseJavaScriptObjectNotation(string) {
  */
 export function stringifyJavaScriptObjectNotation(object) {
   // Write your code here
+  return JSON.stringify(object)
 }
