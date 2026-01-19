@@ -69,6 +69,8 @@ export function retrieveMaximumMinimumUserAges(users) {
  */
 export function parseJavaScriptObjectNotation(string) {
   // Write your code here
+  return JSON.parse(string)
+
 }
 
 /**
