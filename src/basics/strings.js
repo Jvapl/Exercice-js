@@ -1,5 +1,5 @@
-import { match } from "assert";
-import { replaceElementsInArrayAtAGivenPlace } from "../arrays/arrays";
+import { match } from 'assert'
+import { replaceElementsInArrayAtAGivenPlace } from '../arrays/arrays'
 
 /**
  * Find and replace in the provided string, but preserving case
@@ -12,26 +12,30 @@ import { replaceElementsInArrayAtAGivenPlace } from "../arrays/arrays";
  */
 export function findAndReplacePreservingCase(needle, haystack, newWord) {
   // Write your code here
-  if (typeof newWord !== "string" || typeof needle !== "string" || typeof haystack !== "string"){
-  throw new Error ("All this elements must be strings")
+  if (
+    typeof newWord !== 'string' ||
+    typeof needle !== 'string' ||
+    typeof haystack !== 'string'
+  ) {
+    throw new Error('All this elements must be strings')
   }
-  const regex = new RegExp(needle, "gi")
+  const regex = new RegExp(needle, 'gi')
   return haystack.replaceAll(regex, (match) => {
-    let resultWord = ""
+    let resultWord = ''
 
-    for(let i = 0; i < needle.length; i++){
+    for (let i = 0; i < needle.length; i++) {
       const word = match[i]
       const newWord2 = newWord[i]
 
-      if (!newWord2){
+      if (!newWord2) {
         break
       }
-      if(word === word.toUpperCase()){
+      if (word === word.toUpperCase()) {
         resultWord += newWord2.toUpperCase()
-      }else{
+      } else {
         resultWord += newWord2.toLowerCase()
       }
-  }
-  return resultWord
+    }
+    return resultWord
   })
 }

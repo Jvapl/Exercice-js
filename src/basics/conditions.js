@@ -14,8 +14,8 @@
  */
 export function isBiggerThan2(n) {
   // Write your code here
-  if (typeof n === "string" || Number.isNaN(n)){
-  throw new Error ("Must be a valid number")
+  if (typeof n === 'string' || Number.isNaN(n)) {
+    throw new Error('Must be a valid number')
   }
   return n > 2
 }
@@ -27,8 +27,13 @@ export function isBiggerThan2(n) {
  */
 export function isMult(n, m) {
   // Write your code here
-  if (typeof n !== "number" || typeof m !== "number" || Number.isNaN(n) || Number.isNaN(m)){
-  throw new Error("Must be a valid number")
+  if (
+    typeof n !== 'number' ||
+    typeof m !== 'number' ||
+    Number.isNaN(n) ||
+    Number.isNaN(m)
+  ) {
+    throw new Error('Must be a valid number')
   }
   return n % m === 0
 }

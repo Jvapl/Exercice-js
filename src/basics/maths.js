@@ -1,7 +1,7 @@
-import { error } from "console"
-import { errorMonitor } from "events"
-import { NetworkResources } from "inspector/promises"
-import { ExpectTypeOf } from "vitest"
+import { error } from 'console'
+import { errorMonitor } from 'events'
+import { NetworkResources } from 'inspector/promises'
+import { ExpectTypeOf } from 'vitest'
 
 /**
  * @param {number} diameter
@@ -10,12 +10,12 @@ import { ExpectTypeOf } from "vitest"
 
 export function computeSphereVolume(diameter) {
   // Write your code here
-  if (typeof diameter === "string" || diameter < 0 || Number.isNaN(diameter)){
-  throw new Error ("Must be a valid number")
+  if (typeof diameter === 'string' || diameter < 0 || Number.isNaN(diameter)) {
+    throw new Error('Must be a valid number')
   }
   const radius = diameter / 2
   const math = 4 / 3
-  return math * Math.PI * radius**3 
+  return math * Math.PI * radius ** 3
 }
 
 /**
@@ -24,9 +24,9 @@ export function computeSphereVolume(diameter) {
  */
 
 export function roundNumberToOneDecimals(n) {
-  // Write your code here 
-  if (typeof n !== "number" || Number.isNaN(n)){
-  throw new Error ("Must be a valid number")
+  // Write your code here
+  if (typeof n !== 'number' || Number.isNaN(n)) {
+    throw new Error('Must be a valid number')
   }
   return Math.round(n * 10) / 10
 }
@@ -38,19 +38,19 @@ export function roundNumberToOneDecimals(n) {
 
 export function computeAverage(grades) {
   // Write your code here
-  if (!Array.isArray(grades)){
-  throw new Error ("Must be a valid table")
+  if (!Array.isArray(grades)) {
+    throw new Error('Must be a valid table')
   }
-  for(const grade of grades){
-    if (typeof grade !== "number" || Number.isNaN(grade)){
-    throw new Error ("Must be a valid number")
-  }
+  for (const grade of grades) {
+    if (typeof grade !== 'number' || Number.isNaN(grade)) {
+      throw new Error('Must be a valid number')
+    }
   }
   let sum = 0
-  for (let i = 0 ; i < grades.length; i++) {
+  for (let i = 0; i < grades.length; i++) {
     sum += grades[i]
   }
-  return sum/grades.length
+  return sum / grades.length
 }
 
 /**
@@ -60,18 +60,18 @@ export function computeAverage(grades) {
 
 export function roundedAverage(grades) {
   // Write your code here
-  if (!Array.isArray(grades)){
-  throw new Error ("Must be a valid table")
+  if (!Array.isArray(grades)) {
+    throw new Error('Must be a valid table')
   }
-  for(const grade of grades){
-    if (typeof grade !== "number" || Number.isNaN(grade)){
-    throw new Error ("Must be a valid number")
-  }
+  for (const grade of grades) {
+    if (typeof grade !== 'number' || Number.isNaN(grade)) {
+      throw new Error('Must be a valid number')
+    }
   }
   let sum = 0
-  for (let i = 0 ; i < grades.length; i++) {
+  for (let i = 0; i < grades.length; i++) {
     sum += grades[i]
   }
-  const sumGrade = sum/grades.length
+  const sumGrade = sum / grades.length
   return Math.round(sumGrade * 10) / 10
 }

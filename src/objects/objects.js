@@ -5,7 +5,7 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects
  */
 
-import { parse } from "path"
+import { parse } from 'path'
 
 /**
  * @return {Object} you should return a new object containing two properties, first_name and last_name.
@@ -14,8 +14,8 @@ import { parse } from "path"
 export function crateUserObject() {
   // Write your code here
   return {
-    first_name: "Toto",
-    last_name: "Tutu"
+    first_name: 'Toto',
+    last_name: 'Tutu',
   }
 }
 
@@ -26,7 +26,7 @@ export function crateUserObject() {
  */
 export function accessPropertiesInObjects(object) {
   // Write your code here
-  const space = " "
+  const space = ' '
   return object.first_name + space + object.last_name
 }
 
@@ -41,8 +41,8 @@ export function iteratesThroughObjectValuesAndProperties(object) {
   // Write your code here
   const keys2 = {
     values: Object.values(object).map((val) => val.toLowerCase()),
-    keys: Object.keys(object).map((ke) => ke.toUpperCase())
-    }
+    keys: Object.keys(object).map((ke) => ke.toUpperCase()),
+  }
   return keys2
 }
 
@@ -53,12 +53,12 @@ export function iteratesThroughObjectValuesAndProperties(object) {
  */
 export function retrieveMaximumMinimumUserAges(users) {
   // Write your code here
-  users.sort((a,b) => a.age - b.age)
+  users.sort((a, b) => a.age - b.age)
   const first = users[0].name
-  const last = users[users.length - 1].name;
+  const last = users[users.length - 1].name
   return {
     younger: first,
-    older: last
+    older: last,
   }
 }
 /**
@@ -70,7 +70,6 @@ export function retrieveMaximumMinimumUserAges(users) {
 export function parseJavaScriptObjectNotation(string) {
   // Write your code here
   return JSON.parse(string)
-
 }
 
 /**

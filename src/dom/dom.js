@@ -4,13 +4,15 @@
  * https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
  */
 
+import { expect } from "vitest"
+
 /**
  * You need to change the color of the html element with the id "change-my-color"
  */
 export function getElementFromDomAndChangeColorToRed() {
   // Write your code here
   const colorChange = document.getElementById("change-my-color")
-  colorChange.style.background = "red"
+  colorChange.style.color = "rgb(255,0,0)"
 }
 
 /**
@@ -19,6 +21,13 @@ export function getElementFromDomAndChangeColorToRed() {
  */
 export function addElementsInDOM() {
   // Write your code here
+  const p1 = document.createElement("p")
+  const p2 = document.createElement("p")
+  const newDivContent = document.getElementById("add-your-elements-in-this-element")
+  newDivContent.appendChild(p1)
+  newDivContent.appendChild(p2) 
+  p1.textContent = "Bonjour"
+  p2.textContent = "Toto"
 }
 
 /**

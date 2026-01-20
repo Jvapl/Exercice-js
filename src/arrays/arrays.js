@@ -5,15 +5,14 @@
 
 export function splitAllStringsByWordAndFilterEmptyOnes(array) {
   // Write your code here
-  if (!Array.isArray(array)){
-    throw new error ("Need to be an array")
+  if (!Array.isArray(array)) {
+    throw new error('Need to be an array')
   }
   // ce que je cherche est d'etre le plus possible un professionel
-  const resultat = array.flatMap(item => {
-    return item.split(" ")
-  });
-  return resultat.filter(mot => mot !== "")
-
+  const resultat = array.flatMap((item) => {
+    return item.split(' ')
+  })
+  return resultat.filter((mot) => mot !== '')
 }
 
 /**
@@ -24,7 +23,7 @@ export function splitAllStringsByWordAndFilterEmptyOnes(array) {
  */
 export function concatenateArrays(array1, array2) {
   // Write your code here
-  const allArrays = [...array1,...array2]
+  const allArrays = [...array1, ...array2]
   return allArrays
 }
 
@@ -34,7 +33,11 @@ export function concatenateArrays(array1, array2) {
  * @param {...*} newElements
  * @return {array<*>} A new array, **the original array should not be modified**
  */
-export function replaceElementsInArrayAtAGivenPlace(array,index,...newElements) {
+export function replaceElementsInArrayAtAGivenPlace(
+  array,
+  index,
+  ...newElements
+) {
   // Write your code here
-  return array.toSpliced (index, newElements.length ,...newElements)
+  return array.toSpliced(index, newElements.length, ...newElements)
 }
