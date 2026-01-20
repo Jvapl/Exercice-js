@@ -15,4 +15,6 @@ export function reactToClickEvent() {
  */
 export function addEventToDomOnClick() {
   // Write your code here
+  const clickME  = document.getElementById("click-me")
+  clickME.addEventListener('click', () => document.createElement('div.innerText = "clicked"'))
 }
