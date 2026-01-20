@@ -36,6 +36,14 @@ export function addElementsInDOM() {
  * Each element in the list should have the background color indicated in the color key of the listElements
  * @param {array<{name: string, color: string}>} listElements
  */
-export function addAListInDomFromAnArrayOfObjects(listElements) {
-  // Write your code here
+  export function addAListInDomFromAnArrayOfObjects(listElements) {
+//   // Write your code here
+
+  const parent = document.getElementById('add-list-here');
+  listElements.forEach((element) => {
+    const li = document.createElement('li');
+    li.textContent = element.name;
+    li.style.backgroundColor = element.color;
+    parent.appendChild(li);
+  });
 }

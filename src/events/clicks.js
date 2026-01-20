@@ -1,3 +1,5 @@
+import { error } from "console"
+
 /**
  * In the HTML, there is an element with the id "click-me", you need to register
  * a new event listener that will trigger an alert when the element is clicked.
