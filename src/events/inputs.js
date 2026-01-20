@@ -5,6 +5,16 @@
  */
 export function displayInputContentInAlertOnEnterKey() {
   // Write your code here
+  const textImput = document.getElementById("write-some-text")
+  textImput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || textImput === "string"){
+      alert(`${textImput}`)
+    }if (event.key === "Enter" || textImput === " "){
+      alert(" ")
+    }else {
+      alert("Need to be a string")
+    }
+  })
 }
 
 /**
