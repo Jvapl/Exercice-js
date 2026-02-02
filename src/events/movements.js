@@ -1,10 +1,16 @@
 /**
  * Register a new event listener that will retrieve the position of the mouse on the screen
  * and display the coordinates on the p with id "mouse-coordinates".
- * You need to display coordinates as follows : "x: 232, y: 332
+ * You need to display coordinates as follows : "x: 232, y: 332"
  */
 export function mouseMovements() {
   // Write your code here
+  const coordinates = document.getElementById("mouse-coordinates")
+  const mouseMovement = document.addEventListener("mousemove", (event) => {
+      coordinates.innerText = `x: ${event.clientX}, y: ${event.clientY}`
+      console.log(coordinates)
+  })
+  
 }
 
 const randomRGB = () => {
