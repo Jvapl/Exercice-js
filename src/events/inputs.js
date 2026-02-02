@@ -31,7 +31,7 @@ export function addElementsInListOnEnterKey() {
       const newLi = document.createElement("li")
       newLi.textContent = text;
       nameList.appendChild(newLi)
-      inputList.vaule = ""
+      inputList.value = ""
     }
   }
   inputList.addEventListener("keydown", (event) => {
@@ -51,4 +51,30 @@ export function addElementsInListOnEnterKey() {
  */
 export function removeElementsFromListWhenClicked() {
   // Write your code here
+  const inputList = document.getElementById("list-input")
+  const nameList = document.getElementById("list")
+
+  const addElement = () => {
+    const text = inputList.value.trim();
+
+    if (text !== "") {
+      const newLi = document.createElement("li")
+      newLi.textContent = text;
+      nameList.appendChild(newLi)
+      inputList.value = ""
+    }
+  }
+  inputList.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      addElement()
+    }
+  });
+  inputList.addEventListener("blur", () => {
+    addElement();
+  })
+  nameList.addEventListener("click", (event ) => {
+    if (event.target.tagName === "LI"){
+      event.target.remove()
+    }
+  })
 }
