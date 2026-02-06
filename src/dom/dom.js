@@ -4,7 +4,6 @@
  * https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
  */
 
-
 /**
  * You need to change the color of the html element with the id "change-my-color"
  */
@@ -40,11 +39,11 @@ export function addElementsInDOM() {
 export function addAListInDomFromAnArrayOfObjects(listElements) {
   //   // Write your code here
 
-  const parent = document.getElementById('add-list-here');
+  const parent = document.getElementById('add-list-here')
   listElements.forEach((element) => {
-    const li = document.createElement('li');
-    li.textContent = element.name;
-    li.style.backgroundColor = element.color;
-    parent.appendChild(li);
-  });
+    const li = document.createElement('li')
+    li.textContent = element.name
+    li.style.backgroundColor = element.color
+    parent.appendChild(li)
+  })
 }

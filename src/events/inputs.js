@@ -5,11 +5,11 @@
  */
 export function displayInputContentInAlertOnEnterKey() {
   // Write your code here
-  const textInput = document.getElementById("write-some-text")
+  const textInput = document.getElementById('write-some-text')
 
-  textInput.addEventListener("keydown", (event) => {
+  textInput.addEventListener('keydown', (event) => {
     const content = textInput
-    if (event.key === "Enter" || textInput === "string" || textInput !== ""){
+    if (event.key === 'Enter' || textInput === 'string' || textInput !== '') {
       alert(textInput.value)
     }
   })
@@ -18,32 +18,31 @@ export function displayInputContentInAlertOnEnterKey() {
  * On the page, you have an HTML input with the id "list-input".
  * The user can write text into it, and when he presses enter or blur the field,
  * the text should be added to a list of elements with id "list".
-//  */  
+//  */
 export function addElementsInListOnEnterKey() {
-//   // Write your code here
-  const inputList = document.getElementById("list-input")
-  const nameList = document.getElementById("list")
+  //   // Write your code here
+  const inputList = document.getElementById('list-input')
+  const nameList = document.getElementById('list')
 
   const addElement = () => {
-    const text = inputList.value.trim();
+    const text = inputList.value.trim()
 
-    if (text !== "") {
-      const newLi = document.createElement("li")
-      newLi.textContent = text;
+    if (text !== '') {
+      const newLi = document.createElement('li')
+      newLi.textContent = text
       nameList.appendChild(newLi)
-      inputList.value = ""
+      inputList.value = ''
     }
   }
-  inputList.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
+  inputList.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
       addElement()
     }
-  });
-  inputList.addEventListener("blur", () => {
-    addElement();
+  })
+  inputList.addEventListener('blur', () => {
+    addElement()
   })
 }
-
 
 /**
  * Add functionalities to the list. Now, when you click on one of the li, the element should be removed.
@@ -51,29 +50,29 @@ export function addElementsInListOnEnterKey() {
  */
 export function removeElementsFromListWhenClicked() {
   // Write your code here
-  const inputList = document.getElementById("list-input")
-  const nameList = document.getElementById("list")
+  const inputList = document.getElementById('list-input')
+  const nameList = document.getElementById('list')
 
   const addElement = () => {
-    const text = inputList.value.trim();
+    const text = inputList.value.trim()
 
-    if (text !== "") {
-      const newLi = document.createElement("li")
-      newLi.textContent = text;
+    if (text !== '') {
+      const newLi = document.createElement('li')
+      newLi.textContent = text
       nameList.appendChild(newLi)
-      inputList.value = ""
+      inputList.value = ''
     }
   }
-  inputList.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
+  inputList.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
       addElement()
     }
-  });
-  inputList.addEventListener("blur", () => {
-    addElement();
   })
-  nameList.addEventListener("click", (event ) => {
-    if (event.target.tagName === "LI"){
+  inputList.addEventListener('blur', () => {
+    addElement()
+  })
+  nameList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'LI') {
       event.target.remove()
     }
   })

@@ -5,8 +5,8 @@
  */
 export function reactToClickEvent() {
   // Write your code here
-  const clickMe = document.getElementById("click-me")
-  clickMe.addEventListener('click', () => alert("Button clicked"))
+  const clickMe = document.getElementById('click-me')
+  clickMe.addEventListener('click', () => alert('Button clicked'))
 }
 
 /**
@@ -15,10 +15,10 @@ export function reactToClickEvent() {
  */
 export function addEventToDomOnClick() {
   // Write your code here
-  const clickME  = document.getElementById("click-me")
+  const clickME = document.getElementById('click-me')
   clickME.addEventListener('click', () => {
     const newDiv = document.createElement('div')
-    newDiv.innerText = "clicked"
+    newDiv.innerText = 'clicked'
     document.body.appendChild(newDiv)
   })
 }

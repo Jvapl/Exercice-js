@@ -5,12 +5,11 @@
  */
 export function mouseMovements() {
   // Write your code here
-  const coordinates = document.getElementById("mouse-coordinates")
-  const mouseMovement = document.addEventListener("mousemove", (event) => {
+  const coordinates = document.getElementById('mouse-coordinates')
+  const mouseMovement = document.addEventListener('mousemove', (event) => {
     coordinates.innerText = `x: ${event.clientX}, y: ${event.clientY}`
     console.log(coordinates)
   })
-
 }
 
 /**
@@ -25,27 +24,27 @@ const randomRGB = () => {
   return `rgba(${o(r() * s)},${o(r() * s)},${o(r() * s)})`
 }
 let colorChange = randomRGB()
-const changer = document.getElementById("focus-me");
-const labels = document.querySelectorAll('label[for="focus-me"]');
+const changer = document.getElementById('focus-me')
+const labels = document.querySelectorAll('label[for="focus-me"]')
 let defaultColor = changer.style.borderColor
 
 export function hoverFocusAndBlur() {
   // Code principal
 
-  const originalTexts = [];
+  const originalTexts = []
   const colorsUsed = []
 
-  // --- 1 - changer le texte --- First, when you hover it, you have to display a message in his label with 
+  // --- 1 - changer le texte --- First, when you hover it, you have to display a message in his label with
   //                          --- the text "Yes, you hover me !". and remove the message when the hover is loosed.
 
   for (let i = 0; i < labels.length; i++) {
-    originalTexts.push(labels[i].textContent); //stock touts les textes dans le tableau (originalTexts)
+    originalTexts.push(labels[i].textContent) //stock touts les textes dans le tableau (originalTexts)
   }
 
-  // --- 2 - changer border color --- Second, when you focus the input, you have to change hist border color to a random one, 
+  // --- 2 - changer border color --- Second, when you focus the input, you have to change hist border color to a random one,
   //                              --- but different from all the previously used and different from the original one.
 
-  changer.addEventListener("focus", () => {
+  changer.addEventListener('focus', () => {
     while (colorChange === defaultColor || colorsUsed.includes(colorChange)) {
       colorChange = randomRGB()
     }
@@ -54,22 +53,22 @@ export function hoverFocusAndBlur() {
   })
   // --- 3 - reset to default --- Third, when you loose focus of the field, you need to reset the border color to the default one.
 
-  changer.addEventListener("blur", () => {
+  changer.addEventListener('blur', () => {
     changer.style.borderColor = defaultColor
   })
 
   // -================ Principal ================-
-  changer.addEventListener("mouseover", () => {
+  changer.addEventListener('mouseover', () => {
     for (let i = 0; i < labels.length; i++) {
-      labels[i].textContent = "Yes, you hover me !";
+      labels[i].textContent = 'Yes, you hover me !'
     }
-  });
+  })
 
-  changer.addEventListener("mouseleave", () => {
+  changer.addEventListener('mouseleave', () => {
     for (let i = 0; i < labels.length; i++) {
-      labels[i].textContent = originalTexts[i];
+      labels[i].textContent = originalTexts[i]
     }
-  });
+  })
 }
 
 /**

@@ -7,15 +7,16 @@
  */
 export function fetchDataOnClick() {
   // Write your code here
-  const buttonLink = document.getElementById("click-to-fetch")
-  const displayPre = document.getElementById("display-here")
-  buttonLink.addEventListener("click", () => {
-    fetch("https://api.github.com/octocat")
-    .then(reponse => { // 
-      return reponse.text()  // je transforme en texte
-    })
-    .then(information => {
-      displayPre.textContent = information // je mets mon texte dans le pre
-    })
+  const buttonLink = document.getElementById('click-to-fetch')
+  const displayPre = document.getElementById('display-here')
+  buttonLink.addEventListener('click', () => {
+    fetch('https://api.github.com/octocat')
+      .then((reponse) => {
+        //
+        return reponse.text() // je transforme en texte
+      })
+      .then((information) => {
+        displayPre.textContent = information // je mets mon texte dans le pre
+      })
   })
 }
