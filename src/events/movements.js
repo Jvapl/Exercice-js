@@ -24,13 +24,14 @@ const randomRGB = () => {
   const s = 255
   return `rgba(${o(r() * s)},${o(r() * s)},${o(r() * s)})`
 }
-const enteringColor = ''
+let colorChange = randomRGB()
+const changer = document.getElementById("focus-me");
+const labels = document.querySelectorAll('label[for="focus-me"]');
+let defaultColor = changer.style.borderColor
 
 export function hoverFocusAndBlur() {
   // Code principal
-  const changer = document.getElementById("focus-me");
-  const labels = document.querySelectorAll('label[for="focus-me"]');
-  const defaultColor = changer.style.borderColor
+
   const originalTexts = [];
   const colorsUsed = []
 
@@ -45,8 +46,7 @@ export function hoverFocusAndBlur() {
   //                              --- but different from all the previously used and different from the original one.
 
   changer.addEventListener("focus", () => {
-    let colorChange = randomRGB()
-    while (colorChange === defaultColor || colorChange === colorsUsed.includes(colorChange)) {
+    while (colorChange === defaultColor || colorsUsed.includes(colorChange)) {
       colorChange = randomRGB()
     }
     changer.style.borderColor = colorChange
@@ -82,4 +82,11 @@ export function hoverFocusAndBlur() {
  */
 export function changesOnInputEvents() {
   // Write your code here
+  changer.addEventListener('input', () => {
+    changer.style.borderColor = randomRGB
+    defaultColor = randomRGB()
+    labels.forEach((labelColor) => {
+      labelColor.style.color = defaultColor
+    })
+  })
 }
